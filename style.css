@@ -350,14 +350,25 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image:linear-gradient(rgba(41, 50, 60, 0.5), rgba(72, 85, 99,0.5)), url(./img/img-1.png);
+	background-image:linear-gradient(rgba(41, 50, 60, 0.8), rgba(72, 85, 99,0.8)), url(./img/img-1.png);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
 	z-index: 1;
-	
+	transition: transform 0.5s ease;
 	overflow: hidden;
 }
+#services .service-item:hover {
+	transform: scale(1.05); /* Default scale factor */
+  
+	@media only screen and (max-width: 768px) {
+	  transform: scale(1.03); /* Adjust scale factor for smaller screens */
+	}
+  
+	@media only screen and (min-width: 1200px) {
+	  transform: scale(1.1); /* Adjust scale factor for larger screens */
+	}
+  }
 #services .service-item::after {
 	content: '';
 	position: absolute;
@@ -369,6 +380,7 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
+
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
