@@ -284,21 +284,31 @@ p {
 	  left: 25%; /* Adjust the initial position for smaller screens */
 	}
   }
+  /* End Hero Section */
   
-  #hero h1:nth-child(1) {
+ 
+ /* Add media query for smaller screens */
+ @media only screen and (max-width: 768px) {
+	#hero h1 {
+	   font-size: 3rem; /* Adjust font size for smaller screens */
+	   left: 25%; /* Adjust the initial position for smaller screens */
+	}
+ }
+ 
+ #hero h1:nth-child(1) {
 	animation-delay: 1s;
-  }
-  
-  #hero h1:nth-child(2) {
+ }
+ 
+ #hero h1:nth-child(2) {
 	animation-delay: 2s;
-  }
-  
-  #hero h1:nth-child(3) {
+ }
+ 
+ #hero h1:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
-  }
-  
-  #hero h1 span {
+ }
+ 
+ #hero h1 span {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -307,22 +317,47 @@ p {
 	background-color: #2c3e50;
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
-  }
-  
-  #hero h1:nth-child(1) span {
+ }
+ 
+ #hero h1:nth-child(1) span {
 	animation-delay: 0.5s;
-  }
-  
-  #hero h1:nth-child(2) span {
+ }
+ 
+ #hero h1:nth-child(2) span {
 	animation-delay: 1.5s;
-  }
-  
-  #hero h1:nth-child(3) span {
+ }
+ 
+ #hero h1:nth-child(3) span {
 	animation-delay: 2.5s;
-  }
-  /* End Hero Section */
-  
-
+ }
+ #hero {
+	/* ... (existing styles) ... */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align to the right */
+ }
+ 
+ #hero .hero {
+	/* ... (existing styles) ... */
+	text-align: right;
+ }
+ 
+ #hero .hero a.responsive-button {
+	margin-top: 20px; /* Adjust the margin for vertical positioning */
+ }
+ 
+ /* Add a media query for smaller screens */
+ @media only screen and (max-width: 768px) {
+	#hero .hero {
+	   text-align: center; /* Center align for smaller screens */
+	}
+ 
+	#hero .hero a.responsive-button {
+	   margin-top: 10px; /* Adjust the margin for vertical positioning on smaller screens */
+	}
+ }
+ /* End Hero Section */
+ 
 /* Services Section */
 #services .services {
 	flex-direction: column;
@@ -380,7 +415,6 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
-
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
@@ -603,6 +637,18 @@ p {
 	height: 40px; /* Adjust the height of the icon */
 	display: block;
 	margin: auto; /* Center the icon inside the button */
+  }
+  @media only screen and (max-width: 768px) {
+	#scrollToTopBtn {
+	  display: block; /* Show the button on smaller screens */
+	  bottom: 10px; /* Adjust the bottom positioning for smaller screens */
+	  right: 10px; /* Adjust the right positioning for smaller screens */
+	}
+  
+	#scrollToTopBtn img {
+	  width: 30px; /* Adjust the width of the icon for smaller screens */
+	  height: 30px; /* Adjust the height of the icon for smaller screens */
+	}
   }
   
   
